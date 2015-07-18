@@ -23,8 +23,8 @@ getAudioOnly()
 
 #End Functions
 
-valid=false
-while [ "$valid" != "true" ];
+#Loop till link is valid
+while [ true ];
 do
 	printf "Enter url\n"
 	read url
@@ -35,7 +35,7 @@ do
 	if [[ $string =~ $regex ]]
 	then 
 	    echo "Link valid"
-	    valid=true
+            break
 	else
 	    echo "Link not valid"
 	fi
